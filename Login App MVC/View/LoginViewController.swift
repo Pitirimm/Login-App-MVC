@@ -8,12 +8,15 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    let a = User.getUserData()[1].login
 
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userNameTextField.text = a
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -49,10 +52,9 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destinationViewController = segue.destination as? WelcomeViewController else { return }
-        destinationViewController.userName = "113"
-        
-        
+        guard let destinationViewController = segue.destination as? UITabBarController else { return }
+        guard let welcomeVC = destinationViewController.viewControllers?[0] as? WelcomeViewController else { return }
+        welcomeVC.userName = userNameTextField.text
     }
 }
 
