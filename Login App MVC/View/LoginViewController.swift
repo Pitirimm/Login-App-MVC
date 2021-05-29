@@ -9,14 +9,15 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    let a = User.getUserData()[1].login
+    let member = User.getUserData()
+    var index = 0
 
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameTextField.text = a
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -32,6 +33,15 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func logIn(_ sender: UIButton) {
+        
+        switch userNameTextField.text {
+        case "User1":
+            index = 0
+        case "User2":
+            index = 1
+        default:
+            alertWindow(Title: "Error", Message: "Wrong!")
+        }
         performSegue(withIdentifier: "toWelcomeScreenSegue", sender: nil)
     }
     
@@ -54,7 +64,16 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destinationViewController = segue.destination as? UITabBarController else { return }
         guard let welcomeVC = destinationViewController.viewControllers?[0] as? WelcomeViewController else { return }
-        welcomeVC.userName = userNameTextField.text
+        guard let navigationVC = destinationViewController.viewControllers?[1] as? UINavigationController else { return }
+        guard let infoVC = navigationVC.topViewController as? InfoViewController else { return }
+        
+        welcomeVC.userName = member[index].person.fullname
+        infoVC.name = member[index].person.name
+        infoVC.surname = member[index].person.surname
+        infoVC.descriptionUser = member[index].person.description
+        infoVC.age = member[index].person.age
+        infoVC.userPhoto = member[index].person.image
+        
     }
 }
 
