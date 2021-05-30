@@ -32,7 +32,6 @@ class InfoViewController: UIViewController {
         descriptionLabel.text = "\(descriptionUser)"
         ageLabel.text = "\(age) years"
         
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
