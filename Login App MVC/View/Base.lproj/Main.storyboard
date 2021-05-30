@@ -71,9 +71,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="UVa-q1-JQt" firstAttribute="top" secondItem="UfF-0i-y7k" secondAttribute="bottom" constant="50" id="4SK-df-2mN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UVa-q1-JQt" secondAttribute="trailing" constant="164" id="Qry-yV-huj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="UVa-q1-JQt" secondAttribute="trailing" constant="164" id="Qry-yV-huj"/>
                             <constraint firstItem="UfF-0i-y7k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Yt5-Kw-94H"/>
-                            <constraint firstItem="UVa-q1-JQt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="boG-bC-ZpB"/>
+                            <constraint firstItem="UVa-q1-JQt" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="boG-bC-ZpB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UfF-0i-y7k" secondAttribute="trailing" constant="30" id="e0d-HX-dem"/>
                             <constraint firstItem="dU6-eF-ZzL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="mIa-Co-s6n"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dU6-eF-ZzL" secondAttribute="trailing" constant="30" id="msc-Ps-Cz6"/>
@@ -237,16 +237,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pfv-OP-1Ab">
-                                <rect key="frame" x="87" y="126" width="240" height="124"/>
+                                <rect key="frame" x="87" y="250" width="240" height="285"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cCl-KH-r72"/>
                         <color key="backgroundColor" red="0.4941176176" green="0.92156863209999995" blue="0.7607843876" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="pfv-OP-1Ab" firstAttribute="top" secondItem="cCl-KH-r72" secondAttribute="top" constant="70" id="YGh-Dw-Qwm"/>
-                            <constraint firstItem="cCl-KH-r72" firstAttribute="trailing" secondItem="pfv-OP-1Ab" secondAttribute="trailing" constant="87" id="Yxm-xJ-Cvg"/>
-                            <constraint firstItem="cCl-KH-r72" firstAttribute="bottom" secondItem="pfv-OP-1Ab" secondAttribute="bottom" constant="509" id="oLn-fB-lfs"/>
-                            <constraint firstItem="pfv-OP-1Ab" firstAttribute="leading" secondItem="cCl-KH-r72" secondAttribute="leading" constant="87" id="sR5-L8-vRY"/>
+                            <constraint firstItem="pfv-OP-1Ab" firstAttribute="leading" secondItem="cCl-KH-r72" secondAttribute="leading" constant="87" id="0AG-bj-wlQ"/>
+                            <constraint firstItem="cCl-KH-r72" firstAttribute="trailing" secondItem="pfv-OP-1Ab" secondAttribute="trailing" constant="87" id="0dk-SA-pKA"/>
+                            <constraint firstItem="pfv-OP-1Ab" firstAttribute="top" secondItem="cCl-KH-r72" secondAttribute="top" constant="194" id="Ut3-Gs-HZ1"/>
+                            <constraint firstItem="cCl-KH-r72" firstAttribute="bottom" secondItem="pfv-OP-1Ab" secondAttribute="bottom" constant="224" id="iwq-h8-qqn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kZE-eo-tww"/>
