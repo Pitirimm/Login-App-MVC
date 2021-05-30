@@ -15,7 +15,8 @@ class ImageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        photoView.image = UIImage(named: imageAva!)
+        guard let image = self.imageAva else { return }
+        photoView.image = UIImage(named: image)
 
     }
 

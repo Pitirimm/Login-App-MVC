@@ -14,9 +14,11 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var logInButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        logInButton.layer.cornerRadius = 15
         
     }
     
@@ -33,20 +35,24 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func logIn(_ sender: UIButton) {
-        
+        if passwordTextField.text == "Password" {
+    
         switch userNameTextField.text {
         case "User1":
             index = 0
         case "User2":
             index = 1
         default:
-            alertWindow(Title: "Error", Message: "Wrong!")
+            alertWindow(Title: "Error", Message: "Incorrect username or password!")
         }
         performSegue(withIdentifier: "toWelcomeScreenSegue", sender: nil)
+        } else {
+            alertWindow(Title: "Error", Message: "Incorrect username or password!")
+        }
     }
     
     @IBAction func forgotUNTapped(_ sender: UIButton) {
-        alertWindow(Title: "Hint", Message: "Your user name is User")
+        alertWindow(Title: "Hint", Message: "Your user name is User1 or User2")
     }
     
     @IBAction func forgotPasswordTapped(_ sender: UIButton) {
